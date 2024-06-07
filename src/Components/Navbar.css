@@ -1,0 +1,54 @@
+.custom-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 40px 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons .icon {
+  margin-left: 20px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+
+  
+  .custom-dropdown .dropdown-toggle::after {
+    display: none; /* Hide the dropdown toggle arrow */
+  }
+  
+  
