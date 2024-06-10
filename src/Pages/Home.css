@@ -116,7 +116,11 @@
  justify-content: center;
  display: flex;
   }
-  
+  .categories{
+    align-items: center;
+ justify-content: center;
+ display: flex;
+  }
   }
 
   @media only screen and (max-width: 768px) {
