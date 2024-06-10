@@ -75,13 +75,13 @@ function Home() {
           <center>  <img className='mainimg'  src="https://i.postimg.cc/DZ9rz8RR/dd27ff13f17623b463c00b07971a794c.jpg" alt="" /></center>
           </div>
           <div className='slid'>
-          <center>  <img className='mainimg'  src="https://i.postimg.cc/DZ9rz8RR/dd27ff13f17623b463c00b07971a794c.jpg" alt="" /></center>
+          <center>  <img className='mainimg'  src="https://i.postimg.cc/HLCrQQVV/de06b376842c42f0c404726cd9c4c79e.jpg" alt="" /></center>
           </div>
           <div className='slid'>
-          <center>  <img className='mainimg'  src="https://i.postimg.cc/DZ9rz8RR/dd27ff13f17623b463c00b07971a794c.jpg" alt="" /></center>
+          <center>  <img className='mainimg'  src="https://i.postimg.cc/cLfH4rXZ/7165427ca77deed9db56253c3c7c5bf5.jpg" alt="" /></center>
           </div>
           <div className='slid'>
-          <center>  <img className='mainimg'  src="https://i.postimg.cc/DZ9rz8RR/dd27ff13f17623b463c00b07971a794c.jpg" alt="" /></center>
+          <center>  <img className='mainimg'  src="https://i.postimg.cc/pTLXZkxX/c7b1e48cca6b994561cf6e76325f4088.jpg" alt="" /></center>
           </div>
         </Slider>
        
@@ -90,26 +90,26 @@ function Home() {
 
 {/* cards */}
 <Row className='mt-5 ms-4 container-fluid'>
-<Col md={3}>   <Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
+<Col md={3} className='mmm'>   <Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
       <Card.Img variant="top"  src="https://i.postimg.cc/5yp8SnXW/bikee.jpg" />
       <Card.Body>
        <center> <Card.Title>Bike Spare</Card.Title></center>
        
       </Card.Body>
     </Card></Col>
-<Col md={3}><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
+<Col md={3} className='mmm'><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
       <Card.Img variant="top"  src="https://i.postimg.cc/dQzFqw3d/lkkkkkkkkkkkkkkkkkkk.jpg" />
       <Card.Body>
       <center> <Card.Title>Car Spare</Card.Title></center>
       </Card.Body>
     </Card></Col>
-<Col md={3}><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
+<Col md={3} className='mmm'><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
       <Card.Img variant="top" src="https://i.postimg.cc/02gTTnX0/a-llllllllllls.jpg" />
       <Card.Body>
       <center> <Card.Title>Accessories</Card.Title></center>
       </Card.Body>
     </Card></Col>
-<Col md={3}><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
+<Col md={3} className='mmm'><Card style={{ width: '20rem',padding:"20px" ,border:"1px solid white"}}>
       <Card.Img variant="top" src="https://i.postimg.cc/fTK88fGL/a-KMSSMLSssssaa.jpg" />
       <Card.Body>
       <center> <Card.Title>My Vehicles</Card.Title></center>
@@ -169,7 +169,8 @@ function Home() {
   {/* Recently Viewed */}
   <div>
   <h3 className='ms-5'>Recently Viewed</h3>
-<Row className='ms-3 mt-5'>
+<Row className='ms-3 mt-5 recviewed'>
+<div className="scrolling-wrapper" style={{display:"flex"}}>
     <Col md={2}>
     <Card style={{ width: '12rem',padding:"14px" ,border:"1px solid white", boxShadow:" 0 2px 12px rgba(0, 0, 0, 0.1)"}}>
       <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
@@ -224,6 +225,7 @@ function Home() {
       </Card.Body>
     </Card>
     </Col>
+    </div>
 </Row>
 
   </div>
@@ -232,7 +234,8 @@ function Home() {
   {/*   Top sales */}
   <div>
   <h3 className='ms-5 mt-5'>Top Sales</h3>
-<Row className='ms-3 mt-5 mb-5'>
+  <Row className='ms-3 mt-5 mb-5 recviewed'>
+<div className="scrolling-wrapper" style={{display:"flex"}}>
     <Col md={2}>
     <Card style={{ width: '12rem',padding:"14px" ,border:"1px solid white", boxShadow:" 0 2px 12px rgba(0, 0, 0, 0.1)"}}>
       <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
@@ -287,6 +290,7 @@ function Home() {
       </Card.Body>
     </Card>
     </Col>
+    </div>
 </Row>
 
   </div>

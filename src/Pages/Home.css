@@ -107,3 +107,31 @@
   .mainimg{
     width: 50%;
   }
+
+
+  
+@media only screen and (max-width: 768px) {
+  .mmm {
+ align-items: center;
+ justify-content: center;
+ display: flex;
+  }
+  
+  }
+
+  @media only screen and (max-width: 768px) {
+    .recviewed {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .scrolling-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+    .card-style {
+      margin-right: 10px; /* Adjust as needed */
+    }
+  }
+  
