@@ -28,6 +28,134 @@ function Home() {
         autoplaySpeed: 1000 // Adjust autoplay speed here
       };
     
+      const cards = [
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png",
+          title: "Car Body Cover",
+          subtitle: "From $200"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "Shop Now!"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png",
+          title: "Car Body Cover",
+          subtitle: "From $200"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "Shop Now!"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        }
+        
+        // Add more card data as needed
+      ];
+      const secondcards = [
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png",
+          title: "Car Body Cover",
+          subtitle: "From $200"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "Shop Now!"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png",
+          title: "Car Body Cover",
+          subtitle: "From $200"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "Shop Now!"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/CKHtVptG/backlight.png",
+          title: "Car Break light",
+          subtitle: "45% OFF"
+        },
+        {
+          imgSrc: "https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png",
+          title: "Gorf Mobile Holder",
+          subtitle: "Grab Now"
+        }
+        
+        // Add more card data as needed
+      ];
 // const recentlyViewedItems = [
 //     { title: 'Car Break light', subtitle: '45% OFF' },
 //     { title: 'Gorf Mobile Holder', subtitle: 'Grab Now' },
@@ -169,132 +297,23 @@ function Home() {
   {/* Recently Viewed */}
   <div>
   <h3 className='ms-5'>Recently Viewed</h3>
-  <Carousel>
-      {/* Carousel Item 1 */}
-      <Carousel.Item>
-        <Row className='ms-3 mt-5 recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
-          <div className="scrolling-wrapper" style={{ display: "flex" }}>
-            <Col xs={6} sm={4} md={2}>
+  <div className="scroll-container mt-5">
+      <Row className='recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
+        <div className="scrolling-wrapper">
+          {cards.map((card, index) => (
+            <Col xs={6} sm={4} md={2} key={index} className="card-style">
               <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
+                <Card.Img variant="top" src={card.imgSrc} />
                 <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
+                  <center><Card.Title style={{ fontSize: "16px" }}>{card.title}</Card.Title></center>
+                  <center><Card.Title style={{ fontSize: "18px" }}><b>{card.subtitle}</b></Card.Title></center>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Body Cover</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>From $200</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Shop Now!</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)", borderRadius: "10px" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-          </div>
-        </Row>
-      </Carousel.Item>
-
-      {/* Additional Carousel Items */}
-      <Carousel.Item>
-        <Row className='ms-3 mt-5 recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
-          <div className="scrolling-wrapper" style={{ display: "flex" }}>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Body Cover</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>From $200</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Shop Now!</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)", borderRadius: "10px" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-          </div>
-        </Row>
-      </Carousel.Item>
-      {/* Add more Carousel.Item blocks for additional slides */}
-    </Carousel>
+          ))}
+        </div>
+      </Row>
+    </div>
 
   </div>
 
@@ -302,132 +321,27 @@ function Home() {
   {/*   Top sales */}
   <div>
   <h3 className='ms-5 mt-5'>Top Sales</h3>
-  <Carousel>
-      {/* Carousel Item 1 */}
-      <Carousel.Item>
-        <Row className='ms-3 mt-5 mb-5 recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
-          <div className="scrolling-wrapper" style={{ display: "flex" }}>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Body Cover</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>From $200</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Shop Now!</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)", borderRadius: "10px" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-          </div>
-        </Row>
-      </Carousel.Item>
+  <div>
 
-      {/* Additional Carousel Items */}
-      <Carousel.Item>
-        <Row className='ms-3 mt-5 recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
-          <div className="scrolling-wrapper" style={{ display: "flex" }}>
-            <Col xs={6} sm={4} md={2}>
+  <div className="scroll-container mt-5 mb-5">
+      <Row className='recviewed' style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
+        <div className="scrolling-wrapper">
+          {secondcards.map((card, index) => (
+            <Col xs={6} sm={4} md={2} key={index} className="card-style">
               <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
+                <Card.Img variant="top" src={card.imgSrc} />
                 <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
+                  <center><Card.Title style={{ fontSize: "16px" }}>{card.title}</Card.Title></center>
+                  <center><Card.Title style={{ fontSize: "18px" }}><b>{card.subtitle}</b></Card.Title></center>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/B6hPktBd/2b9e2de85bb754de38a14b3886366f52.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Body Cover</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>From $200</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Shop Now!</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)", borderRadius: "10px" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/CKHtVptG/backlight.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "16px" }}>Car Break light</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>45% OFF</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} sm={4} md={2}>
-              <Card style={{ width: '12rem', padding: "14px", border: "1px solid white", boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)" }}>
-                <Card.Img variant="top" src="https://i.postimg.cc/W3z7fRPb/9b43ff92fb9625bc0cf59a822a6d63ca.png" />
-                <Card.Body>
-                  <center><Card.Title style={{ fontSize: "14px" }}>Gorf Mobile Holder</Card.Title></center>
-                  <center><Card.Title style={{ fontSize: "18px" }}><b>Grab Now</b></Card.Title></center>
-                </Card.Body>
-              </Card>
-            </Col>
-          </div>
-        </Row>
-      </Carousel.Item>
-      {/* Add more Carousel.Item blocks for additional slides */}
-    </Carousel>
+          ))}
+        </div>
+      </Row>
+    </div>
+
+  </div>
 
   </div>
 
