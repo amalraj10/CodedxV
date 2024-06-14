@@ -3,11 +3,15 @@ import { Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Service.css'
 import { Grid, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 function Services() {
+    const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <div className='p-2'>
+    <div className='p-2' style={{overflow:"hidden"}}>
       <h2 style={{color:"#143d82"}}>Maintainace Service <span style={{color:"#00a2ff"}}>Part</span></h2>
 
       <div><Row>
@@ -36,39 +40,42 @@ function Services() {
            </div>
         </Col>
         <Col md={8} className='ms-5 mt-5'>
-        <Grid container spacing={4} sx={{ margin: '40px 0' }}>
-      <Grid item xs={12}>
-      <Typography variant="h4" style={{ color: "#143d82" }}>
+        <Grid item xs={12}>
+        <Typography variant={isSmallScreen ? "h5" : "h4"} style={{ color: "#143d82" }}>
           Maintainace Service Part
-        </Typography>      </Grid>
+        </Typography>     </Grid>
+      <Grid container spacing={isSmallScreen ? 2 : 4} justifyContent="center" sx={{ margin: '10px -65px' }}>
+        {[
+          { title: 'Belt', src: 'https://i.postimg.cc/MpPBmRjf/ddbeb81.jpg' },
+          { title: 'Brake', src: 'https://i.postimg.cc/BnqyKWxQ/437bfd0.jpg' },
+          { title: 'Catalogue Service manual', src: 'https://i.postimg.cc/FKzBTjWM/140c4a2.jpg' },
+          { title: 'Clutch', src: 'https://i.postimg.cc/pTn1HPtk/e8cb288.jpg' },
+          { title: 'Engine Oil', src: 'https://i.postimg.cc/gjFtc1zp/4614ecf.webp' },
+          { title: 'Filter', src: 'https://i.postimg.cc/mZC6pZjg/33d30ef.jpg' },
+          { title: 'Glow Plug', src: 'https://i.postimg.cc/9Q8xwDmJ/d6d71f0.jpg' },
+          { title: 'Horn', src: 'https://i.postimg.cc/Bb0NfDpQ/d5b3ac7.jpg' },
+          { title: 'Light', src: 'https://i.postimg.cc/6p3cKBrR/53380d3.webp' },
+          { title: 'Repair Service Kit', src: 'https://i.postimg.cc/FKb7nLYx/5f75a07.jpg' },
+          { title: 'Shock Absorber and strut', src: 'https://i.postimg.cc/V6YdykMP/f26073e.jpg' },
+          { title: 'Spark Plug', src: 'https://i.postimg.cc/X7yNzChy/acd0058.jpg' },
+          { title: 'Wiper blade and sets', src: 'https://i.postimg.cc/RCpq89Z2/1053d82.jpg' },
+        ].map((item, index) => (
+          <Grid item xs={6} sm={6} md={3} key={index} sx={{ marginTop: '16px', marginBottom: '16px', display: 'flex', justifyContent: 'center' }}>
+            <Card style={{ width: '100%' }}>
+              <Card.Img variant="top" style={{ padding: '15px', height: '9rem' }} src={item.src} />
+              <Card.Body>
+                <Card.Title style={{ textAlign: 'center' }}>{item.title}</Card.Title>
+                <Card.Text></Card.Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Col>
 
-      {[
-        { title: 'Belt', src: 'https://i.postimg.cc/MpPBmRjf/ddbeb81.jpg' },
-        { title: 'Brake', src: 'https://i.postimg.cc/BnqyKWxQ/437bfd0.jpg' },
-        { title: 'Catalogue Service manual', src: 'https://i.postimg.cc/FKzBTjWM/140c4a2.jpg' },
-        { title: 'Clutch', src: 'https://i.postimg.cc/pTn1HPtk/e8cb288.jpg' },
-        { title: 'Engine Oil', src: 'https://i.postimg.cc/gjFtc1zp/4614ecf.webp' },
-        { title: 'Filter', src: 'https://i.postimg.cc/mZC6pZjg/33d30ef.jpg' },
-        { title: 'Glow Plug', src: 'https://i.postimg.cc/9Q8xwDmJ/d6d71f0.jpg' },
-        { title: 'Horn', src: 'https://i.postimg.cc/Bb0NfDpQ/d5b3ac7.jpg' },
-        { title: 'Light', src: 'https://i.postimg.cc/6p3cKBrR/53380d3.webp' },
-        { title: 'Repair Service Kit', src: 'https://i.postimg.cc/FKb7nLYx/5f75a07.jpg' },
-        { title: 'Shock Absorber and strut', src: 'https://i.postimg.cc/V6YdykMP/f26073e.jpg' },
-        { title: 'Spark Plug', src: 'https://i.postimg.cc/X7yNzChy/acd0058.jpg' },
-        { title: 'Wiper blade and sets', src: 'https://i.postimg.cc/RCpq89Z2/1053d82.jpg' },
-      ].map((item, index) => (
-        <Grid item xs={12} sm={6} md={3} key={index} sx={{ marginTop: '16px' }}>
-          <Card style={{ width: '14rem' }}>
-            <Card.Img variant="top" style={{ padding: '15px', height: '9rem' }} src={item.src} />
-            <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text></Card.Text>
-            </Card.Body>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-        </Col>
+
+
+
         
 
         </Row></div>
