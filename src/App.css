@@ -1,0 +1,51 @@
+/* 
+
+
+const services = [
+  { name: 'Belt', imgSrc: 'https://i.postimg.cc/MpPBmRjf/ddbeb81.jpg' },
+  { name: 'Brake', imgSrc: 'https://i.postimg.cc/BnqyKWxQ/437bfd0.jpg' },
+  { name: 'Catalogue Service manual', imgSrc: 'https://i.postimg.cc/FKzBTjWM/140c4a2.jpg' },
+  { name: 'Clutch', imgSrc: 'https://i.postimg.cc/pTn1HPtk/e8cb288.jpg' },
+  { name: 'Engine Oil', imgSrc: 'https://i.postimg.cc/gjFtc1zp/4614ecf.webp' },
+  { name: 'Filter', imgSrc: 'https://i.postimg.cc/mZC6pZjg/33d30ef.jpg' },
+  { name: 'Glow Plug', imgSrc: 'https://i.postimg.cc/9Q8xwDmJ/d6d71f0.jpg' },
+  { name: 'Horn', imgSrc: 'https://i.postimg.cc/Bb0NfDpQ/d5b3ac7.jpg' },
+  { name: 'Light', imgSrc: 'https://i.postimg.cc/6p3cKBrR/53380d3.webp' },
+  { name: 'Repair Service Kit', imgSrc: 'https://i.postimg.cc/FKb7nLYx/5f75a07.jpg' },
+  { name: 'Shock Absorber and strut', imgSrc: 'https://i.postimg.cc/V6YdykMP/f26073e.jpg' },
+  { name: 'Spark Plug', imgSrc: 'https://i.postimg.cc/X7yNzChy/acd0058.jpg' },
+
+  { name: 'Wiper blade and sets ', imgSrc: 'https://i.postimg.cc/RCpq89Z2/1053d82.jpg' },
+  
+
+
+];
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Maintenance Service <span className="blue-text">Parts</span></h1>
+        <div className="filter-container">
+          <div className="filter">
+            <label htmlFor="car-maker">Vehicle</label>
+            <select id="car-maker">
+              <option>Choose car maker</option>
+            </select>
+          </div>
+          <button className="reset-button">RESET</button>
+        </div>
+      </header>
+      <div className="service-grid">
+        {services.map(service => (
+          <div className="service-item" key={service.name}>
+            <img src={service.imgSrc} alt={service.name} />
+            <p>{service.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App; */
